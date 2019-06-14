@@ -17,3 +17,11 @@ export function addSHA() {
 export function removeSHA() {
   return {type:REMOVE_SHA}
 }
+
+export function addShaAsync() {
+  return dispatch => {
+    setTimeout (() =>{
+      dispatch(addSHA())
+    }, 1000)
+  }
+}
